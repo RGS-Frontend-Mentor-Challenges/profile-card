@@ -8,7 +8,8 @@
 }
 
 .elementMargin {
-    margin-top: 5%;
+    width: 70%;
+    margin: auto;
 }
 
 body {
@@ -23,17 +24,14 @@ body {
     background-image: url(./images/bg-pattern-card.svg);
     background-repeat: no-repeat;
     width: 350px;
+    max-width: 350px;
+    min-width: 350px;
     height: 400px;
     margin: 10% auto;
     background-color: white;
     border-radius: 15px;
     padding-top: 12%;
-}
-
-.age {
-    margin-left: 3%;
-    color: hsl(0, 0%, 59%);
-    font-weight: lighter;
+    position: relative;
 }
 
 .pic {
@@ -42,11 +40,29 @@ body {
     width: 105px;
     height: 105px;
     background-image: url(./images/image-victor.jpg);
-    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: center;
+    left: 35%;
 }
 
-p {
-    margin: 5%;
+.mainText {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    position: absolute;
+    top: 40%;
+}
+
+.age {
+    margin-left: 3%;
+    color: hsl(0, 0%, 59%);
+    font-weight: lighter;
+}
+
+.location {
     font-size: 15px;
     font-weight: bold;
     color: hsl(0, 0%, 59%);
@@ -62,20 +78,27 @@ p {
     width: 100%;
 }
 
-ul {
+.statconfig {
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    height: 35%;
+    align-items: center;
+    border-top: 1px solid hsl(0, 0%, 59%);
+    position: absolute;
+    top: 65%;
 }
 
-li {
+.stats {
     text-align: center;
     list-style-type: none;
 }
 
-li span {
+.bigText {
     font-weight: 900;
 }
 
-li p {
+.statDescription {
+    color: hsl(0, 0%, 59%);
     font-size: 13px;
 }
