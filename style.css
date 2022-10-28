@@ -5,103 +5,110 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    list-style: none;
 }
 
-.elementMargin {
-    width: 70%;
-    margin: auto;
+:root {
+    --bg-pic: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    --box-pic: url(./images/bg-pattern-card.svg);
+    --profile-pic: url(./images/image-victor.jpg);
+
+    --general-bg-color: hsl(185, 75%, 39%);
+    --general-text-color: hsl(229, 23%, 23%);
+    --general-color: #fff;
+    --detail-color: hsl(0, 0%, 59%);
+
+    --font-family: "Kumbh Sans", sans-serif;
+    --font-size: 18px;
+
+    --profile-measure: 6.3rem;
+
+    --default-width: auto;
+    --default-max-width: 21.8rem;
+    --default-min-width: var(--default-max-width);
+    --box-border-radius: 15px;
 }
 
 body {
-    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    display: flex;
+    justify-content: center;
+    background-image: var(--bg-pic);
     background-repeat: no-repeat, no-repeat;
     background-position: top -500px left -400px, bottom -700px right -250px;
-    background-color: hsl(185, 75%, 39%);
-    font-family: Kumbh Sans;
-    font-size: 18px;
-    color: hsl(229, 23%, 23%);
+    background-color: var(--general-bg-color);
+    color: var(--general-text-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
     text-align: center;
 }
 
 .main {
-    background-image: url(./images/bg-pattern-card.svg);
+    background-image: var(--box-pic);
     background-repeat: no-repeat;
-    width: 350px;
-    max-width: 350px;
-    min-width: 350px;
+    width: var(--default-width);
     height: 400px;
-    margin: 10% auto;
-    background-color: white;
-    border-radius: 15px;
-    padding-top: 12%;
+    max-width: var(--default-max-width);
+    min-width: var(--default-min-width);
+    margin-top: 10%;
+    background-color: var(--general-color);
+    border-radius: var(--box-border-radius);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    max-width: 100%;
 }
 
 .pic {
     border-radius: 50px;
-    border: 5px solid white;
-    width: 105px;
-    height: 105px;
-    background-image: url(./images/image-victor.jpg);
+    border: 5px solid var(--general-color);
+    width: var(--profile-measure);
+    height: var(--profile-measure);
+    background-image: var(--profile-pic);
+    background-repeat: no-repeat;
     position: absolute;
-    top: 20%;
-    left: center;
+    top: 22%;
     left: 35%;
 }
 
-.mainText {
-    height: 30%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    position: absolute;
-    top: 40%;
+.user-general {
+    width: 70%;
+    height: 13%;
 }
 
 .age {
     margin-left: 3%;
-    color: hsl(0, 0%, 59%);
+    color: var(--detail-color);
     font-weight: lighter;
 }
 
 .location {
     font-size: 15px;
     font-weight: bold;
-    color: hsl(0, 0%, 59%);
+    color: var(--detail-color);
 }
 
-.line {
-    border: 1px solid hsl(0, 0%, 59%);
-    background-color: hsl(0, 0%, 59%);
-    width: 100%;
-}
 
-.list {
-    width: 100%;
-}
-
-.statconfig {
+.stat-config {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 35%;
-    align-items: center;
-    border-top: 1px solid hsl(0, 0%, 59%);
-    position: absolute;
-    top: 65%;
+    border-top: 0.1rem solid var(--detail-color);
 }
 
-.stats {
-    text-align: center;
-    list-style-type: none;
-}
-
-.bigText {
+.big-text {
     font-weight: 900;
 }
 
-.statDescription {
+.stat-description {
     color: hsl(0, 0%, 59%);
     font-size: 13px;
 }
